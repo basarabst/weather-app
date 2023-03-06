@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "It is the mini-project for experience. This will show you the current weather forecast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basarabst/weather-app.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "mini-project"
+  ],
+  "author": "Stanislav Basarab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basarabst/weather-app/issues"
+  },
+  "homepage": "https://github.com/basarabst/weather-app#readme"
+}
