@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "It is the mini-project for experience. This will show you the current weather forecast.",
   "main": "index.js",
+  "type": "module",
+  "parser": "babel-eslint",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/basarabst/weather-app/issues"
   },
-  "homepage": "https://github.com/basarabst/weather-app#readme"
+  "homepage": "https://github.com/basarabst/weather-app#readme",
+  "devDependencies": {
+    "eslint": "^8.35.0"
+  }
 }
