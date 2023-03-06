@@ -11,6 +11,17 @@ const weatherApi = async (city) => {
   return data;
 }
 
+const formatDates = (dates) => {
+  const formatDates = [];
+  for (const date of dates) {
+    const formatDate = new Date(date).toLocaleDateString();
+    formatDates.push(formatDate);
+  }
+  formatDates[0] = 'Today';
+  formatDates[1] = 'Tomorrow';
+  return formatDates;
+}
+
 const getWeatherData = async (city) => {
 
   const cityData = getCityData(city);
@@ -18,11 +29,12 @@ const getWeatherData = async (city) => {
 
   const apiDates = response.hourly.time;
   const dateIndexes = [];
-  const dates = apiDates.filter((date, index) => {
+  const rawDates = apiDates.filter((date, index) => {
     const condition = date.includes('12:00');
     if (condition && dateIndexes.length < 5) dateIndexes.push(index);
     return condition;
   }).slice(0, 5);
+  const dates = formatDates(rawDates);
 
   const temperatures = response.hourly.temperature_2m.filter((t, tempIndex) => {
     return dateIndexes.includes(tempIndex);
